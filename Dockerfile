@@ -1,7 +1,6 @@
 FROM node:16-alpine3.11 AS base
-WORKDIR /
-COPY index.js ./
-COPY package.json ./
+WORKDIR /usr/app
+COPY ./ ./
 RUN npm install
 ENTRYPOINT ["node", "index.js"]
 EXPOSE 80
